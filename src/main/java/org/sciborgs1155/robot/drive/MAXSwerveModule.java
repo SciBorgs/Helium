@@ -36,7 +36,6 @@ public class MAXSwerveModule implements ModuleIO {
   private final SimpleMotorFeedforward driveFeedforward =
       new SimpleMotorFeedforward(Driving.FF.S, Driving.FF.V, Driving.FF.A);
 
-  private final String name;
   private final Rotation2d angularOffset;
 
   private SwerveModuleState setpoint = new SwerveModuleState();
@@ -48,9 +47,7 @@ public class MAXSwerveModule implements ModuleIO {
    * @param turnPort turning motor port
    * @param angularOffset offset from drivetrain
    */
-  public MAXSwerveModule(String name, int drivePort, int turnPort, Measure<Angle> angularOffset) {
-    this.name = name;
-
+  public MAXSwerveModule(int drivePort, int turnPort, Measure<Angle> angularOffset) {
     driveMotor = SparkUtils.create(drivePort);
     driveMotor.setInverted(false);
     driveMotor.setIdleMode(IdleMode.kBrake);

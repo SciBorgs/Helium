@@ -31,10 +31,6 @@ public final class DriveConstants {
     new Translation2d(-WHEEL_BASE.in(Meters) / 2, -TRACK_WIDTH.in(Meters) / 2) // rear right
   };
 
-  public static final String[] MODULE_NAMES = {
-    "front left module", "front right module", "rear left moduke", "rear right module"
-  };
-
   // angular offsets of the modules, since we use absolute encoders
   // ignored (used as 0) in simulation because the simulated robot doesn't have offsets
   public static final List<Measure<Angle>> ANGULAR_OFFSETS =
